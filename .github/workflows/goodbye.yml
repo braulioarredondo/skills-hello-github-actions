@@ -8,7 +8,6 @@ jobs:
   Merge:
     name: After Merge
     if: github.event.pull_request.merged == true
-    name: Post Merge Job
     runs-on: ubuntu-latest
     steps:
       - run: echo "You have merged $PR_URL successfully!!"
@@ -17,7 +16,6 @@ jobs:
   closed:
     name: After Closed
     if: github.event.pull_request.merged == false
-    name: Post Close Job
     runs-on: ubuntu-latest
     steps:
       - run: echo "You have closed/cancelled $PR_URL successfully!!"
