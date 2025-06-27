@@ -1,4 +1,4 @@
-name: Post welcome comment
+name: Post welcome Worfklow
 on:
   pull_request:
     types: [opened]
@@ -6,10 +6,15 @@ permissions:
   pull-requests: write
 jobs:
   welcome:
-    name: Post welcome comment
+    name: Post welcome Job
     runs-on: ubuntu-latest
     steps:
       - run: gh pr comment "$PR_URL" --body "Welcome to the repository!"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
+  goodbye:
+    name: Last goodbye Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Goodbye Att. $GITHUB_ACTOR"
