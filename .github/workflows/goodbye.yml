@@ -1,0 +1,14 @@
+name: Post Merge Worfklow
+on:
+  pull_request:
+    types: [closed]
+permissions:
+  pull-requests: write
+jobs:
+  Merge:
+    name: Post Merge Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "You have merged $PR_URL successfully!!"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
