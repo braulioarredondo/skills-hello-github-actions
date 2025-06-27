@@ -2,6 +2,8 @@
 
 <img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
 
+[![Post Merge Worfklow](https://github.com/braulioarredondo/skills-hello-github-actions/actions/workflows/goodbye.yml/badge.svg)](https://github.com/braulioarredondo/skills-hello-github-actions/actions/workflows/goodbye.yml)
+
 Hey braulioarredondo!
 
 Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
